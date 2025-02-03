@@ -225,3 +225,113 @@ p {
     opacity: 0;
     transition: all .3s 0;
 }
+
+/* Responsividade para telas pequenas (dispositivos móveis) */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px; /* Ajuste para telas menores */
+        margin-bottom: 16px; /* Ajuste para o espaçamento inferior */
+        margin-top: 30px; /* Aumenta a margem superior para abaixar mais */
+    }
+
+    /* Estilo do card */
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    input, button {
+        width: 100%; /* Ajuste para que inputs e botões ocupem toda a largura */
+        font-size: 14px; /* Ajuste no tamanho da fonte */
+        padding: 10px; /* Diminui o padding para não ficar tão espaçado */
+    }
+
+    p {
+        width: 30%; /* Diminuindo ainda mais a largura do parágrafo */
+        font-size: 14px;
+        text-align: center; /* Alinha o texto ao centro */
+        margin: 0 auto; /* Centraliza o parágrafo */
+        color: rgba(255, 255, 255, 0.8); /* Cor suave do texto */
+    }
+
+    .esquerda, .direita {
+        width: 100%; /* Ajuste na largura das seções */
+        margin-bottom: 20px; /* Espaçamento para separação entre as seções */
+    }
+
+    .formLogin, .formCadastro {
+        width: 100%; /* Garante que os formulários ocupem a largura completa */
+        padding: 10px;
+    }
+
+    /* Ajuste para o bloco "Já tem conta? Faça login" */
+    .facaLogin, .facaCadastro {
+        width: 100%;
+        transform: translateX(0);
+        margin-bottom: 20px; /* Adiciona espaçamento entre os botões */
+        display: flex;
+        justify-content: center; /* Alinha o conteúdo centralizado */
+        align-items: center;
+    }
+
+    .facaLogin button, .facaCadastro button {
+        width: auto; /* Ajuste o tamanho dos botões para o conteúdo */
+        font-size: 14px; /* Ajuste no tamanho da fonte dos botões */
+        padding: 8px 16px; /* Ajusta o padding para ficar mais compacto */
+    }
+}
+
+/* Responsividade para telas muito pequenas (como celulares em modo retrato) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px; /* Ajuste para telas ainda menores */
+        margin-bottom: 16px; /* Ajuste o espaçamento inferior */
+        margin-top: 40px; /* Aumenta mais a margem superior para abaixar ainda mais */
+    }
+
+    /* Estilo do card */
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    /* Ajuste do bloco "Já tem conta? Faça login" */
+    .facaLogin, .facaCadastro {
+        width: 100%;
+        transform: translateX(0);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facaLogin p, .facaCadastro p {
+        width: 30%; /* Reduzindo ainda mais a largura do parágrafo */
+        font-size: 12px; /* Tamanho da fonte para telas menores */
+        text-align: center; /* Alinha o texto ao centro */
+        margin-bottom: 8px; /* Ajusta o espaçamento inferior do texto */
+        color: rgba(255, 255, 255, 0.8); /* Cor suave do texto */
+    }
+
+    .facaLogin button, .facaCadastro button {
+        width: auto; /* Ajuste para botões menores */
+        font-size: 12px; /* Tamanho de fonte menor para dispositivos pequenos */
+        padding: 6px 12px; /* Ajuste no padding */
+    }
+
+    /* Ajustes nos formulários */
+    .formLogin, .formCadastro {
+        margin-bottom: 20px; /* Adiciona um espaçamento entre os formulários */
+    }
+
+    .containerPai {
+        padding: 10px; /* Ajusta o espaçamento nas bordas da tela */
+    }
+}
