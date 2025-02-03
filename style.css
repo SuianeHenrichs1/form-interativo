@@ -1,0 +1,227 @@
+/* Reset de estilos padrão e definição de fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    font-weight: normal;
+}
+
+/* Estilo do corpo da página */
+body {
+    color: white;    
+}
+
+/* Estilo dos títulos h2 */
+h2 {
+    font-size: 58px;    
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+form {    
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+/* Estilo do botão dentro do formulário */
+form button {
+    background: linear-gradient(90deg, #968ee2 0%, #ab7cb8 100%);
+}
+
+/* Estilo dos inputs e botões */
+input, button {      
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 12px 20px;     
+    font-size: 16px;
+    width: 400px;
+}
+
+/* Estilo dos inputs */
+input {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilo do placeholder dos inputs */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);    
+}
+
+/* Estilo dos botões */
+button {
+    font-weight: 700;
+    margin-top: 25px;
+    cursor: pointer;
+    color: rgba(34, 33, 33, 0.76);
+    padding: 16px;    
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover nos botões */
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilo dos parágrafos */
+p {
+    margin-bottom: 32px;
+    text-align: center;
+    width: 400px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo do container pai */
+.containerPai {
+    width: 100%;
+    height: 100vh;
+    background-color: #14151a;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+/* Estilo do card */
+.card {
+    width: 80%;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 32px;
+    padding: 32px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo das seções esquerda e direita do card */
+.esquerda, .direita {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Estilo dos formulários e seções de login e cadastro */
+.formLogin, .facaLogin, .formCadastro, .facaCadastro {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo das seções de login e cadastro */
+.facaLogin, .facaCadastro {
+    position: absolute;
+
+    h2, p {
+        color: rgba(46, 44, 44, 0.76)
+    }
+
+    button {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1.8px solid rgba(231, 215, 215, 0.856);
+    }
+}
+
+/* Background móvel do card */
+.card::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("assets/fundo.webp");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;    
+    z-index: 0;
+}
+
+/* Estilos para quando o login está ativo */
+.card.loginActive .facaLogin {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.loginActive .facaCadastro{
+    transform: translateX(0);
+    transition: all .3s .3s;   
+    opacity: 1; 
+}
+
+.card.loginActive .formLogin{
+    transition: all .3s .3s;
+    opacity: 1; 
+}
+
+.card.loginActive .formCadastro{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.loginActive::after{
+    transform: translateX(50%);
+}
+
+/* Estilos para quando o cadastro está ativo */
+.card.cadastroActive .facaCadastro {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.cadastroActive .formLogin{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.cadastroActive::after{
+    transform: translateX(-50%);
+}
+
+.card.cadastroActive .facaLogin{
+    transform: translateX(0);
+    transition: all .3s .3s;   
+    opacity: 1; 
+}
+
+.card.cadastroActive .formCadastro{
+    transition: all .3s .3s;
+    opacity: 1; 
+}
+
+/* Transições */
+.card::after {
+    transition: all .5s;
+}
+
+.facaCadastro {
+    transition: all .3s 0;
+    transform: translateX(200%);
+    opacity: 0;
+}
+
+.facaLogin {
+    transition: all .3s 0;
+    transform: translateX(-200%);
+    opacity: 0;
+}
+
+.formLogin {
+    opacity: 0;
+    transition: all .3s 0;
+}
+
+.formCadastro {
+    opacity: 0;
+    transition: all .3s 0;
+}

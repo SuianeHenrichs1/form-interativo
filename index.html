@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Form Interativo</title>
+</head>
+
+<body>
+    <section class="containerPai">
+        <div class="card cadastroActive">
+            <div class="esquerda">
+                <!-- Formulário de Login -->
+                <div class="formLogin">
+                    <h2>Fazer Login</h2>
+                    <form>
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="senha" placeholder="Senha">
+                        <button type="submit">Entrar</button>
+                    </form>
+                </div> <!-- Fechando corretamente a formLogin -->
+
+                <!-- Seção para quem já tem uma conta -->
+                <div class="facaLogin">
+                    <h2>Já tem </br>uma conta?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cum sunt numquam blanditiis
+                        dolor ea, culpa debitis dicta consequatur amet? Molestias repellendus eius eos voluptatibus
+                        porro adipisci accusantium ad sed.</p>
+                    <button class="loginButton">Faça Login</button>
+                </div>
+            </div> <!-- Fechando corretamente a div esquerda -->
+
+            <div class="direita">
+                <!-- Formulário de Cadastro -->
+                <div class="formCadastro">
+                    <h2>Cadastro</h2>
+                    <form>
+                        <input type="text" name="nome" placeholder="Nome">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="senha" placeholder="Senha">
+                        <input type="password" name="senha" placeholder="Confirme a sua senha">
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
+
+                <!-- Seção para quem não tem uma conta -->
+                <div class="facaCadastro">
+                    <h2>Não tem </br>uma conta?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cum sunt numquam blanditiis
+                        dolor ea, culpa debitis dicta consequatur amet? Molestias repellendus eius eos voluptatibus
+                        porro adipisci accusantium ad sed.</p>
+                    <button class="cadastroButton">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
